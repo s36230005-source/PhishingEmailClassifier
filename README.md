@@ -44,4 +44,23 @@ phishing_email_classifier/
 ├── requirements.txt                      # dependencies
 ├── README.md                             # dokumentasi
 
+# 🔍 Cara Menjalankan Notebook (Training & Evaluasi)
+
+Jika ingin melakukan eksperimen ulang atau retraining model:
+Pastikan file dataset berada pada folder /dataset.
+Aktifkan environment Python (jika menggunakan virtualenv / conda): conda activate env_name atau source venv/bin/activate
+Jalankan Jupyter Notebook: jupyter notebook
+Buka file notebook: Phishing_Email_Classifier.ipynb
+Klik Run All untuk menjalankan seluruh sel.
+Setelah training selesai, simpan model baru ke: models/random_forest_tfidf_model.pkl
+
+# 🚀 Cara Menjalankan Prediksi via Streamlit App (Local)
+Jalankan perintah berikut dari folder project:
+cd app
+pip install -r requirements.txt
+streamlit run app.py
+
+
+Jika berhasil akan tampil URL:
+
 
