@@ -11,36 +11,37 @@ Proyek ini membangun model klasifikasi berbasis TF-IDF untuk memproses teks emai
 Dataset yang digunakan berasal dari Kaggle:
 Cara download dataset
 Buka link Kaggle dataset (contoh dataset phishing email):
-https://www.kaggle.com/datasets/monkeysnatch/large-email-phishing-dataset
+(https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset?select=phishing_email.csv)
 Login menggunakan akun Kaggle.
 Klik tombol Download.
-Ekstrak dataset ke folder:
-./dataset/
-sehingga struktur folder menjadi:
 
-phishing_email_classifier/
-├── dataset/
-│   ├── phishing.csv
-│   ├── legitimate.csv
-
-🛠 Persyaratan Library & Environment
-
+# 🛠 Persyaratan Library & Environment
 Rekomendasi Python version:
-
 Python 3.10+
 
-
 Install dependencies utama:
-
 pip install -r requirements.txt
 
-Isi file requirements.txt (contoh minimal)
+Isi file requirements.txt
+streamlit
+scikit-learn
 pandas
 numpy
-scikit-learn
-nltk
-matplotlib
-seaborn
-imbalanced-learn
-xgboost
-streamlit
+joblib
+
+phishing_email_classifier/
+│
+├── models/
+│   └── random_forest_tfidf_model.pkl     # model hasil training & save
+│
+├── src/
+│   ├── preprocessing.py                  # fungsi text preprocessing
+│   ├── predict.py                        # fungsi load model & prediksi
+│
+├── app/
+│   └── app.py                            # aplikasi Streamlit
+│
+├── requirements.txt                      # dependencies
+├── README.md                             # dokumentasi
+
+
